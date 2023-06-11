@@ -1,6 +1,7 @@
-#ifndef __API_ENTRYPOINTS_H__
-#define __API_ENTRYPOINTS_H__
+#ifndef __NPP_NOTION_H__
+#define __NPP_NOTION_H__
 
-int double_it(int num);
+#include "../src/api_entrypoints.hpp"
+#include "../src/client.hpp"
 
 #endif

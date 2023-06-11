@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.0.0)
+cmake_minimum_required(VERSION 3.21.0)
 project(notion-sdk-cpp VERSION 0.0.1 LANGUAGES C CXX)
 # lower standard to support as much application as possible,
 # unless new features really are needed
@@ -30,6 +30,11 @@ add_library(NotionSDK SHARED
     src/api_entrypoints.cpp
 )
 target_link_libraries(NotionSDK PRIVATE cpr::cpr)
+# resolves any DLL linking issues
+add_custom_command(TARGET NotionSDK POST_BUILD
+  COMMAND ${CMAKE_COMMAND} -E copy -t $<TARGET_FILE_DIR:NotionSDK> $<TARGET_RUNTIME_DLLS:NotionSDK>
+  COMMAND_EXPAND_LISTS
+)
 
 # === TESTING ===
 include(CTest)

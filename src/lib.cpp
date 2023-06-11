@@ -1,4 +1,7 @@
+#define DLLExport __declspec( dllexport )
+
 #include "api_entrypoints.hpp"
+#include "client.hpp"
 
 // note: use __declspec(dllexport) if you want a specific object/type/function/etc. to be exposed
 // for others using the final DLL file

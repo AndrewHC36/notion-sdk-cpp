@@ -1,8 +1,8 @@
-#ifndef __CLIENT_H__
-#define __CLIENT_H__
+#ifndef __NPP_CLIENT_H__
+#define __NPP_CLIENT_H__
 
-#define DLLExport __declspec( dllexport )
+namespace notion {
 
-DLLExport int double_it(int num);
+} // namespace notion
 
 #endif

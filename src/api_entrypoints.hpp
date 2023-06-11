@@ -1,8 +1,12 @@
-#ifndef __API_ENTRYPOINTS_H__
-#define __API_ENTRYPOINTS_H__
+#ifndef __NPP_API_ENTRYPOINTS_H__
+#define __NPP_API_ENTRYPOINTS_H__
 
-#define DLLExport __declspec( dllexport )
+namespace notion {
+    DLLExport int double_it(int num);
+} // namespace notion
 
-DLLExport int double_it(int num);
+namespace {
+
+} // private namespace
 
 #endif
