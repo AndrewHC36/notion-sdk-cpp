@@ -1,12 +1,13 @@
-#define DLLExport __declspec( dllexport )
-
 #include "api_entrypoints.hpp"
+#include "async_api_entrypoints.hpp"
 #include "client.hpp"
 
-// note: use __declspec(dllexport) if you want a specific object/type/function/etc. to be exposed
-// for others using the final DLL file
 
-// external libraries: CPR (Curl for People)
+// MVP: able to use Notion through this library via very basic structure w/o custom types, json parsing, etc.
+
+// use an external json library to parse into json types back, 
+// but use custom/CPR types to encode data back into CPR-ready param
+// what about json output into CPR types?
 
 // api usage psuedocode
 /*

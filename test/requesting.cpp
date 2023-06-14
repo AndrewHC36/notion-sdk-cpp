@@ -44,7 +44,7 @@ int test_requesting(int argc, char** const argv) {
 
     std::cout << resp_delete.status_code << std::endl;
 
-    // AUTHENTICATION: BEARER
+    // AUTHENTICATION: OAUTH V2.0 BEARER
     cpr::Response resp_auth_bearer = cpr::Get(
         cpr::Url{"https://httpbin.org/bearer"},
         cpr::Bearer{"TOKEN"}

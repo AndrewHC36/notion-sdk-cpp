@@ -28,6 +28,8 @@ include_directories(include/)
 add_library(NotionSDK SHARED
     src/lib.cpp
     src/api_entrypoints.cpp
+    src/client.cpp
+    src/async_api_entrypoints.cpp
 )
 target_link_libraries(NotionSDK PRIVATE cpr::cpr)
 # resolves any DLL linking issues
@@ -44,7 +46,7 @@ enable_testing() # ctest -C Debug
 create_test_sourcelist (Tests
     test/testmain.cpp
     test/prelude.cpp
-    test/requesting.cpp
+#    test/requesting.cpp
   )
 
 # linking ext dep and NotionSDK itself to each tests

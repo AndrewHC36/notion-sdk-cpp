@@ -1,5 +1,13 @@
 #include "api_entrypoints.hpp"
 
-DLLExport int double_it(int num) {
-    return num+num;
-}
+#include <cpr/cpr.h>
+
+namespace notion {
+
+
+
+} // namespace notion
+
+namespace {
+
+} // private namespace
